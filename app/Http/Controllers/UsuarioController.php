@@ -12,7 +12,9 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        return Usuario::all();
+        $todos = Usuario::all();
+
+        return view('usuario.read',['todos'=>$todos]);
     }
 
    
@@ -27,7 +29,7 @@ class UsuarioController extends Controller
         $usuario->email= $request->email;
         $usuario->contrasena= $request->contrasena;
         $usuario->save();
-        return view('usuario.read',['usuario'=>$usuario]);
+        return "guardado correctamente";
     }
 
     /**

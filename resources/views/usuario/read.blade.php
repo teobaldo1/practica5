@@ -20,7 +20,7 @@
         </div>
 
         <?php 
-        var_dump($usuario)
+        
         ?>
         {{-- @foreach ($usuario as $item)
          {{$item}}->nombre

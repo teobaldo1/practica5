@@ -21,6 +21,6 @@ Route::get("/crearusuario",function(){
     return view("usuario.crear");
 });
 Route::get("/readUser",function(){
-    $usuarios=[UsuarioController::class,"index"];
-    return view("usuario.read", $usuarios);
+    
+    return view("usuario.read", [UsuarioController::class,"index"]);
 });
